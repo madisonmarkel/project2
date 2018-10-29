@@ -17,6 +17,7 @@ CREATE TABLE recipes(
     serving VARCHAR(20),
     cook_time VARCHAR(100),
     cook_method VARCHAR(500),
+    createdAt TIMESTAMP NOT NULL,
     PRIMARY KEY(id)
 );
 

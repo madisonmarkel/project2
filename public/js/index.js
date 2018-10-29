@@ -7,14 +7,14 @@ var $exampleList = $("#example-list");
 // The API object contains methods for each kind of request we'll make
 
 var API = {
-  saveExample: function(example) {
+  saveExample: function(Recipe) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json",
       },
       type: "POST",
       url: "api/examples",
-      data: JSON.stringify(example)
+      data: JSON.stringify(Recipe)
     });
   },
   getExamples: function() {
@@ -34,15 +34,15 @@ var API = {
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function() {
   API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+    var $examples = data.map(function(Recipe) {
       var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .text(Recipe.ingredients)
+        .attr("href", "/example/" + Recipe.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": example.id
+          "data-id": Recipe.id
         })
         .append($a);
 

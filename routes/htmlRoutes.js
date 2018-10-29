@@ -15,7 +15,7 @@ module.exports = function(app) {
   app.get("/example/:id", function(req, res) {
     db.Recipe.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
       res.render("example", {
-        example: dbExample
+        Recipe: dbExample
       });
     });
   });
