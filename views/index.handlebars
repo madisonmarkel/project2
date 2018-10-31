@@ -6,20 +6,20 @@
         <h2>This is our Home Page!</h2>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="form_recipe_name">Recipe Name</label>
+            <input type="text" id="form_recipe_name" class="form-control" aria-describedby="form_recipe_name" placeholder="Enter Recipe Name">
           </div>
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+            <label for="form_recipe_ingredients">Ingredients</label>
+            <textarea class="form-control" id="form_recipe_ingredients" aria-describedby="form_recipe_ingredients" placeholder="Enter All Ingredients"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
+        <h3>Recipes:</h3>
+        <ul id="recipe-list" class="list-group">
           {{#each recipe}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
+            <a href="recipe/{{this.id}}">{{this.recipe_name}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
