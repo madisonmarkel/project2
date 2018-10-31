@@ -3,18 +3,155 @@
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
+        <h2>Eat Your Heart Out</h2>
+
         <form class="clearfix mb-4" action="POST">
+          {{!-- NAME --}}
           <div class="form-group">
             <label for="form_recipe_name">Recipe Name</label>
             <input type="text" id="form_recipe_name" class="form-control" aria-describedby="form_recipe_name" placeholder="Enter Recipe Name">
           </div>
+          {{!-- INGREDIENTS --}}
           <div class="form-group">
             <label for="form_recipe_ingredients">Ingredients</label>
             <textarea class="form-control" id="form_recipe_ingredients" aria-describedby="form_recipe_ingredients" placeholder="Enter All Ingredients"></textarea>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+          {{!-- INSTRUCTIONS --}}
+          <div class="form-group">
+            <label for="form_recipe_instructions">Instructions</label>
+            <textarea class="form-control" id="form_recipe_instructions" aria-describedby="form_recipe_instructions" placeholder="Enter Instructions"></textarea>
+          </div>
+          {{!-- COOK TIME --}}
+          <div class="form-group">
+            <label for="form_recipe_time">Preparation Time</label>
+            <textarea class="form-control" id="form_recipe_time" aria-describedby="form_recipe_time" placeholder="Enter Preparation Time"></textarea>
+          </div>
+          {{!-- COOK METHOD --}}
+          <div class="form-group">
+            <label for="form_recipe_method">Cooking Method</label>
+            <textarea class="form-control" id="form_recipe_method" aria-describedby="form_recipe_method" placeholder="Enter appliances used"></textarea>
+          </div>
+          {{!-- SERVINGS --}}
+          <div class="form-group">
+            <label for="form_recipe_servings">Servings</label>
+            <textarea class="form-control" id="form_recipe_servings" aria-describedby="form_recipe_servings" placeholder="Enter Servings"></textarea>
+          </div>
+          {{!-- PHOTO --}}
+          <div class="form-group">
+            <label for="form_recipe_photo">Photo</label>
+            <textarea class="form-control" id="form_recipe_photo" aria-describedby="form_recipe_photo" placeholder="Upload Photo Link"></textarea>
+          </div>
+          {{!-- TYPE CATEGORY --}}
+          <div class="form-group">
+          <label for="form_recipe_category"><h2>Category:</h2></label>
+          <br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_breakfast" value="category_breakfast">
+            <label class="form-check-label" for="category_breakfast">Breakfast</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_brunch" value="category_brunch">
+            <label class="form-check-label" for="category_brunch">Brunch</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_lunch" value="category_lunch">
+            <label class="form-check-label" for="category_lunch">Lunch</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_snack" value="category_snack">
+            <label class="form-check-label" for="category_snack">Snack</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_dinner" value="category_dinner">
+            <label class="form-check-label" for="category_dinner">Dinner</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_dessert" value="category_dessert">
+            <label class="form-check-label" for="category_dessert">Dessert</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_drinks" value="category_drinks">
+            <label class="form-check-label" for="category_drinks">Drinks</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_sauces" value="category_sauces">
+            <label class="form-check-label" for="category_sauces">Dips, Dressings, Sauces</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_soups" value="category_soups">
+            <label class="form-check-label" for="category_soups">Soups &amp;  Salads</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_pastas" value="category_pastas">
+            <label class="form-check-label" for="category_pastas">Pastas</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_sides" value="category_sides">
+            <label class="form-check-label" for="category_sides">Sides</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_kids" value="category_kids">
+            <label class="form-check-label" for="category_kids">Kid Meals</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="category_holiday" value="category_holiday">
+            <label class="form-check-label" for="category_holiday">Holiday &amp; Parties</label>
+          </div>
+          </div>
+
+          {{!-- DIETARY CATEGORY --}}
+          <div class="form-group">
+          <label for="form_recipe_dietary"><h2>Dietary Categories:</h2></label>
+          <br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_gluten" value="type_gluten">
+            <label class="form-check-label" for="type_gluten">Gluten Free</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_vegetarian" value="type_vegetarian">
+            <label class="form-check-label" for="type_vegetarian">Vegetarian</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_pescetarian" value="type_pescetarian">
+            <label class="form-check-label" for="type_pescetarian">Pescetarian</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_vegan" value="type_vegan">
+            <label class="form-check-label" for="type_vegan">Vegan</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_paleo" value="type_paleo">
+            <label class="form-check-label" for="type_paleo">Paleo</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_dairy" value="type_dairy">
+            <label class="form-check-label" for="type_dairy">Dairy-Free</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_soy" value="type_soy">
+            <label class="form-check-label" for="type_soy">Soy-Free</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_egg" value="type_egg">
+            <label class="form-check-label" for="type_egg">Egg-Free</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_wheat" value="type_wheat">
+            <label class="form-check-label" for="type_wheat">Wheat-Free</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_kosher" value="type_kosher">
+            <label class="form-check-label" for="type_kosher">Kosher</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="type_pork" value="type_pork">
+            <label class="form-check-label" for="type_pork">Pork-Free</label>
+          </div>
+          </div>
+          {{!-- BUTTON --}}
+          <button id="submit" class="btn btn-primary">Submit</button>
         </form>
+        {{!-- RECIPE POPULATION --}}
         <h3>Recipes:</h3>
         <ul id="recipe-list" class="list-group">
           {{#each recipe}}

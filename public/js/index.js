@@ -1,6 +1,14 @@
 // Get references to page elements
 var $recipeName = $("#form_recipe_name");
 var $recipeIngredients = $("#form_recipe_ingredients");
+var $recipeInstructions = $("#form_recipe_instructions");
+var $recipeTime = $("#form_recipe_time");
+var $recipeMethod = $("#form_recipe_method");
+var $recipeServings = $("#form_recipe_servings");
+var $recipePhoto = $("#form_recipe_photo");
+var $recipeCategory = $("#form_recipe_category");
+var $recipeDietary = $("#form_recipe_dietary");
+
 var $submitBtn = $("#submit");
 var $recipeList = $("#recipe-list");
 
@@ -68,7 +76,14 @@ var handleFormSubmit = function(event) {
 
   var recipe = {
     recipe_name: $recipeName.val().trim(),
-    ingredients: $recipeIngredients.val().trim()
+    ingredients: $recipeIngredients.val().trim(),
+    instructions: $recipeInstructions.val().trim(),
+    cook_time: $recipeTime.val().trim(),
+    cook_method: $recipeMethod.val().trim(),
+    serving: $recipeServings.val().trim(),
+    photo: $recipePhoto.val().trim(),
+    type_category: $recipeCategory.val(),
+    dietary_category: $recipeDietary.val(),
   };
 
   if (!(recipe.recipe_name && recipe.ingredients)) {
@@ -82,6 +97,13 @@ var handleFormSubmit = function(event) {
 
   $recipeName.val("");
   $recipeIngredients.val("");
+  $recipeInstructions.val("");
+  $recipeTime.val("");
+  $recipeMethod.val("");
+  $recipeServings.val("");
+  $recipePhoto.val("");
+  $recipeCategory.val("");
+  $recipeDietary.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
