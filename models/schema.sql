@@ -21,4 +21,13 @@ CREATE TABLE recipes(
     PRIMARY KEY(id)
 );
 
+CREATE TABLE users(
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password blob,
+)
+
 SELECT * FROM recipes

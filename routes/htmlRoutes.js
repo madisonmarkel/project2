@@ -39,19 +39,19 @@ module.exports = function(app) {
 
   // Load index page
   app.get("/", function(req, res) {
-    db.Recipe.findAll({}).then(function(dbExamples) {
+    db.Recipe.findAll({}).then(function(dbRecipes) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples
+        recipes: dbRecipes
       });
     });
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Recipe.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        Recipe: dbExample
+  app.get("/recipe/:id", function(req, res) {
+    db.Recipe.findOne({ where: { id: req.params.id } }).then(function(dbRecipe) {
+      res.render("recipe", {
+        Recipe: dbRecipe
       });
     });
   });
