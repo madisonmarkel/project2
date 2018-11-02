@@ -11,3 +11,15 @@ body {
 
 
 }
+
+.centered {
+  position: fixed; /* or absolute */
+  top: 40%;
+  left: 37%;
+}
+
+#centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 37%;
+}
