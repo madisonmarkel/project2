@@ -55,7 +55,7 @@ module.exports = function(app) {
   app.get("/api/:recipe", function(req, res) {
     db.Recipe.findAll({
       where: {
-        title: req.params.recipe_title
+        recipe_name: req.params.recipe_name
       }
     }).then(function(results) {
       res.json(results);
@@ -67,7 +67,7 @@ module.exports = function(app) {
     console.log("Recipe Data:");
     console.log(req.body);
     db.Recipe.create({
-      recipe_title: req.body.recipe_title,
+      recipe_name: req.body.recipe_name,
       ingredients: req.body.ingredients,
       dietary_category: req.body.dietary_category,
       type_category: req.body.type_category, 
@@ -84,7 +84,7 @@ module.exports = function(app) {
     console.log("UPDATE RECIPE APIROUTES:");
     console.log(req.body);
     db.Recipe.update(
-      {recipe_title: req.body.recipe_title,
+      {recipe_name: req.body.recipe_name,
       dietary_category: req.body.dietary_category,
       type_category: req.body.type_category, 
       photo: req.body.photo,
@@ -110,5 +110,5 @@ module.exports = function(app) {
       res.json(data);
     });
   });
-  });
+});
 };

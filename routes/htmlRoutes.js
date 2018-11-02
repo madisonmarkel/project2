@@ -42,7 +42,7 @@ module.exports = function(app) {
     db.Recipe.findAll({}).then(function(dbRecipes) {
       res.render("index", {
         msg: "Reciprocity",
-        recipes: dbRecipes
+        recipe: dbRecipes
       });
     });
   });
