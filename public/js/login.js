@@ -1,8 +1,8 @@
 $(document).ready(function() {
   // Getting references to our form and inputs
-  var loginForm = $("form.login"); // we can make these class/id any name we want
-  var emailInput = $("input#email-input"); // we can make these class/id any name we want
-  var passwordInput = $("input#password-input"); // we can make these class/id any name we want
+  var loginForm = $("#formlogin"); // we can make these class/id any name we want
+  var emailInput = $("#email"); // we can make these class/id any name we want
+  var passwordInput = $("#password"); // we can make these class/id any name we want
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", function(event) {
