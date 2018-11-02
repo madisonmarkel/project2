@@ -1,0 +1,25 @@
+
+body {
+  background-image: url(assets/soup.jpg);
+
+  background-repeat: no-repeat;
+  z-index: 40%;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 300px;  
+
+
+
+}
+
+.centered {
+  position: fixed; /* or absolute */
+  top: 40%;
+  left: 37%;
+}
+
+#centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 37%;
+}
