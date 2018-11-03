@@ -31,6 +31,13 @@ module.exports = function(app) {
   //-----------------------------------------------
   //
 
+//=============== might need to change some of the passport routes pseudo coded here==============
+// app.post("/signup", function (req, res, next) {
+
+//   res.render("/index", {
+//     title: "Registration Complete! PLease Log in to get cooking!"
+//   });
+// });
 
   // Load page
   app.get("/members", function(req, res) {
