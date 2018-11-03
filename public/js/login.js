@@ -4,8 +4,11 @@ $(document).ready(function() {
   var emailInput = $("#email"); // we can make these class/id any name we want
   var passwordInput = $("#password"); // we can make these class/id any name we want
 
+  console.log(loginForm);
+
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", function(event) {
+    console.log('Hi')
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
@@ -24,11 +27,12 @@ $(document).ready(function() {
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
   function loginUser(email, password) {
+    console.log('Howdy')
     $.post("/api/login", {
       email: email,
       password: password
     }).then(function(data) {
-      window.location.replace(data);
+      window.location.href = data;
       // If there's an error, log the error
     }).catch(function(err) {
       console.log(err);

@@ -38,9 +38,13 @@ $(document).ready(function () {
       email: email,
       password: password,
     }).done(function (data) {
-      // window.location.replace(data);
+      console.log(data);
+      window.location.href = data ;
+   
+
       emailInput.val("");
       passwordInput.val("");
+
       // If there's an error, handle it by throwing up a bootstrap alert
     }).fail(handleLoginErr);
   }

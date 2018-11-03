@@ -3,9 +3,10 @@ var passport = require("../config/passport");
 
 module.exports = function (app) {
   // ========================= PASSPORT.JS FUNCTIONALITY 
-  app.post("/api/login", passport.authenticate("local"), function (req, res) {
+  app.post("/api/login", passport.authenticate("local"), function (req, res) {  
+    console.log(req.user);
 
-    res.json("/members");
+    res.send("/members");
   });
 
   app.post("/api/signup", function (req, res) {
@@ -16,8 +17,21 @@ module.exports = function (app) {
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       username: req.body.username
-    }).then(function () {
-      res.redirect(307, "/members");
+    }).then(function (user) {
+      req.login(user, function(err) {
+        if (err) {
+          console.log(err)
+           return next(err); 
+          }
+        return res.send('/members');
+      });
+      // res.send({
+      //   url: "/members",
+      // isAuthenticated: true
+      // });
+
+
+      // res.render("members");
     }).catch(function (err) {
       console.log(err);
       res.json(err);
@@ -44,8 +58,6 @@ module.exports = function (app) {
         id: req.user.id
       });
     }
-
-
 
     // ========================= GET ALL RECIPES
     app.get("/api/recipes", function (req, res) {
