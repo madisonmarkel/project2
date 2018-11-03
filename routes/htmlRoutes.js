@@ -37,7 +37,7 @@ module.exports = function(app) {
   //-----------------------------------------------
   //
 
-  app.get("/members", function(req, res) {
+  app.get("/members", isAuthenticated, function(req, res) {
     db.Recipe.findAll({}).then(function(dbRecipes) {
       res.render("members", {
         msg: "Reciprocity",
