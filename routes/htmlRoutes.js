@@ -22,12 +22,13 @@ module.exports = function(app) {
     res.render("signup");
   });
 
+  // =================== WASN'T WORKING
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/members", isAuthenticated, function(req, res) {
+  // app.get("/members", isAuthenticated, function(req, res) {
     
-    res.render("members");
-  });
+  //   res.render("members");
+  // });
 
   // app.get("/members", function(req, res) {
     
@@ -36,15 +37,25 @@ module.exports = function(app) {
   //-----------------------------------------------
   //
 
-  // Load page
   app.get("/members", function(req, res) {
     db.Recipe.findAll({}).then(function(dbRecipes) {
-      res.send("members", {
+      res.render("members", {
         msg: "Reciprocity",
         recipe: dbRecipes
       });
     });
   });
+
+  // =================== WASN'T WORKING
+  // Load page
+  // app.get("/members", function(req, res) {
+  //   db.Recipe.findAll({}).then(function(dbRecipes) {
+  //     res.send("members", {
+  //       msg: "Reciprocity",
+  //       recipe: dbRecipes
+  //     });
+  //   });
+  // });
 
   // Load example page and pass in an example by id
   app.get("/recipe/:id", function(req, res) {
