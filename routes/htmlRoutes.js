@@ -28,21 +28,18 @@ module.exports = function(app) {
     
     res.render("members");
   });
+
+  // app.get("/members", function(req, res) {
+    
+  //   res.render("members");
+  // });
   //-----------------------------------------------
   //
-
-//=============== might need to change some of the passport routes pseudo coded here==============
-// app.post("/signup", function (req, res, next) {
-
-//   res.render("/index", {
-//     title: "Registration Complete! PLease Log in to get cooking!"
-//   });
-// });
 
   // Load page
   app.get("/members", function(req, res) {
     db.Recipe.findAll({}).then(function(dbRecipes) {
-      res.render("members", {
+      res.send("members", {
         msg: "Reciprocity",
         recipe: dbRecipes
       });
