@@ -31,10 +31,10 @@ $(document).ready(function() {
     $.post("/api/login", {
       email: email,
       password: password
-    }).then(function(data) {
+    }).done(function(data) {
       window.location.href = data;
       // If there's an error, log the error
-    }).catch(function(err) {
+    }).fail(function(err) {
       console.log(err);
     });
   }
