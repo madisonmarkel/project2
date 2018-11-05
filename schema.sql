@@ -19,13 +19,19 @@ CREATE TABLE recipes(
     PRIMARY KEY(id)
 );
 
--- CREATE TABLE users(
---     id INTEGER NOT NULL AUTO_INCREMENT,
---     firstname VARCHAR(50) NOT NULL,
---     lastname VARCHAR(50) NOT NULL,
---     username VARCHAR(50) NOT NULL,
---     email VARCHAR(100) NOT NULL,
---     password blob,
--- )
+CREATE TABLE users(
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    username VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password BINARY(60),
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+);
+
+
+
+
 
 SELECT * FROM recipes
