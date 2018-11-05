@@ -1,34 +1,62 @@
 
 /* css for index */
 
+.Pacifico {
+  font-family: 'Pacifico';
+  color: #eded45; 
+  
+}
+
+.Quicksand {
+  font-family: 'Quicksand';
+  color: #fff; 
+  
+}
+
+
+
+
+
+p { 
+  text-align: center;
+  padding-top: 00px;
+}
 
 body {
-  background-image: url(assets/soup.jpg);
+  background-image: url(assets/background1.jpg);
 
   background-repeat: no-repeat;
-  z-index: 40%;
+  z-index: 0%;
   background-attachment: fixed;
   background-position: center;
   margin-top: 300px;  
-
-
-
+ 
+       
 }
 
-.centered {
-  position: fixed; /* or absolute */
-  top: 40%;
-  left: 37%;
-}
+
+
 
 #centered {
   position: fixed; /* or absolute */
-  top: 50%;
+  top: 27%;
   left: 37%;
 }
 
 
+.btn-primary { 
 
+  background-color: #3a9147;
+  padding: 10px 30px; 
+}
+
+.btn-primary:focus{
+  background: #8C8;
+}
+
+.btn-primary:hover{
+  background: #8C8;
+}
 
 /* css for members flickity carousel */
 
