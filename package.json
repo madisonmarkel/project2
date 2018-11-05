@@ -12,10 +12,9 @@
   },
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
+
     "@glidejs/glide": "^3.2.3",
-=======
->>>>>>> 0a0bb694cf6e91d0f116cd9660afb6e29f821006
+
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
@@ -72,5 +71,8 @@
     "prettier": "^1.13.7"
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> 1a579cc1371bb7f2b9f829c55afc6143d8196697
+=======
+>>>>>>> 86ac47d21f68299c11176ef008c8b8a1a61d82cc

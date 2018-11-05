@@ -19,7 +19,7 @@ CREATE TABLE recipes(
     PRIMARY KEY(id)
 );
 
-CREATE TABLE users(
+CREATE TABLE User(
     id INTEGER NOT NULL AUTO_INCREMENT,
     firstname VARCHAR(50) NOT NULL,
     lastname VARCHAR(50) NOT NULL,
