@@ -1,52 +1,4 @@
 
-body {
-  background-image: url(/assets/soup.jpg);
-
-  background-repeat: no-repeat;
-  z-index: 40%;
-  background-attachment: fixed;
-  background-position: center;
-  margin-top: 3em;  
-  margin-bottom:3em;
-}
- /* API TABLE */
-.apiImages {
-  max-width: 6em;
-  margin:0 auto;
-}
-td {
-  padding:1em;
-}
-
-.background {
-  background: rgba(0,0,0,.5);
-  color:#fff;
-  padding: 1em;
-}
-
-.centered {
-  position: fixed; /* or absolute */
-  top: 40%;
-  left: 37%;
-}
-
-#centered {
-  position: fixed; /* or absolute */
-  top: 50%;
-  left: 37%;
-}
-
-/*MODAL*/
-.modal {
-  color:#000;
-}
-#recipePic {
-  max-width:20em;
-}
-
-/* ------------------------------------------------- */
-
-
 /* css for index */
 
 .Pacifico {
@@ -70,15 +22,17 @@ p {
   padding-top: 00px;
 }
 
-body {
-  background-image: url(assets/background1.jpg);
+
+
+body  {
+  background-image: url(assets/signupbackground.jpg);
 
   background-repeat: no-repeat;
   z-index: 0%;
   background-attachment: fixed;
   background-position: center;
   margin-top: 300px;  
- 
+  font-family: sans-serif;
        
 }
 
@@ -111,7 +65,7 @@ body {
 
 * { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
+
 
 .carousel {
   background: #EEE;
