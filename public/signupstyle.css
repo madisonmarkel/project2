@@ -22,15 +22,17 @@ p {
   padding-top: 00px;
 }
 
-body {
-  background-image: url(assets/background1.jpg);
+
+
+body  {
+  background-image: url(assets/signupbackground.jpg);
 
   background-repeat: no-repeat;
   z-index: 0%;
   background-attachment: fixed;
   background-position: center;
   margin-top: 300px;  
- 
+  font-family: sans-serif;
        
 }
 
@@ -63,7 +65,7 @@ body {
 
 * { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
+
 
 .carousel {
   background: #EEE;

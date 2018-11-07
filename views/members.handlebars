@@ -1,7 +1,7 @@
 <div id="home">
   <div class="container">
     <div class="row">
-      <div class="col-8 offset-2">
+      <div class="col-8 offset-2 background">
         <h1>{{msg}}</h1>
         <h2>Eat Your Heart Out</h2>
 
@@ -152,6 +152,7 @@
               <input class="form-check-input dietaryCategory" type="checkbox" id="type_pork" value="&#10003; Pork Free">
               <label class="form-check-label" for="type_pork">Pork-Free</label>
             </div>
+
           </div>
           {{!-- BUTTON --}}
           <button id="submit" class="btn btn-primary">Submit</button>
@@ -162,12 +163,61 @@
           {{#each recipe}}
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="recipe/{{this.id}}">{{this.recipe_name}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
+            <button class="btn btn-danger float-right delete">Delete</button>
           </li>
           {{/each}}
         </ul>
+
+        {{!-- API ---}}
+        <h3>Search</h3>
+        <form>
+        <div class="form-group">
+          <label for="api_Search">Search for Recipe by Ingredients in your Pantry</label>
+          <input type="text" class="form-control" id="user_apiSearch1" aria-describedby="user_apiSearch1" placeholder="Enter 1st Ingredient">
+          <input type="text" class="form-control" id="user_apiSearch2" aria-describedby="user_apiSearch2" placeholder="Enter 2nd Ingredient">
+          <input type="text" class="form-control" id="user_apiSearch3" aria-describedby="user_apiSearch3" placeholder="Enter 3rd Ingredient">
+          <input type="text" class="form-control" id="user_apiSearch4" aria-describedby="user_apiSearch4" placeholder="Enter 4th Ingredient">
+        </div>
+        <button type="submit" id="api_submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <table class="submit_tables" id="api_search_append">
+        <tr>
+
+        </tr>
+      </table>
+
+      {{!-- <!-- BOOTSTRAP MODAL --> --}}
+    <div class="modal" tabindex="-1" role="dialog" id="recipe-api-modal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Eat your heart out</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2 id="recipeName"></h2>
+                    <p style="text-align: center;"><img id="recipePic" src=""></p>
+                    <p style="text-align: center;" id="recipeServing"></p>
+                    <p style="text-align: center;" id="recipeInstructions"></p>
+                    <p style="text-align: center;" id="recipeIngredients"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
   </div>
 </div>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+{{!-- <script src="/js/index.js"></script> --}}
