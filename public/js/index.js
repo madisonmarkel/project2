@@ -38,6 +38,7 @@ $( "#api_submit" ).click(function() {
         tRowData.prepend(recipeTitle);
         tBody.append(tRowData);
       };
+      
     // ================= MORE INFO
         // MORE INFORMATION ABOUT RECIPE
         $(".api_more_info" ).click(function() {
@@ -64,9 +65,6 @@ $( "#api_submit" ).click(function() {
                     // shows modal
                     $("#recipe-api-modal").modal("toggle");
                     //});
-                      // $(".modal").on("hidden.bs.modal", function () {
-                      //     window.location = "/members";
-                      // });
              });
                 
           });
@@ -182,7 +180,7 @@ var refreshRecipes = function() {
 
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
+        .text("Delete");
 
       $li.append($button);
 
@@ -211,11 +209,13 @@ var handleFormSubmit = function(event) {
     dietary_category: $recipeDietary.val(),
   };
 
-  if (!(recipe.recipe_name && recipe.ingredients)) {
-    alert("You must enter an example text and description!");
+  if (!(recipe.recipe_name && recipe.ingredients && recipe.instructions)) {
+    alert("You must enter a name, ingredients, and instructions!");
     return;
   }
+
   console.log(recipe);
+
   API.saveRecipe(recipe).then(function() {
     refreshRecipes();
   });
