@@ -41,8 +41,8 @@ module.exports = function (app) {
     console.log(req.user.username);
     db.Recipe.create({
       recipe_name: req.body.recipe_name,
-      // dietary_category: DataTypes.TEXT,
-      // type_category: DataTypes.TEXT,
+      dietary_category: req.body.dietary_category,
+      type_category: req.body.type_category,
       photo: req.body.photo,
       instructions: req.body.instructions,
       ingredients: req.body.ingredients,
