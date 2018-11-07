@@ -1,0 +1,91 @@
+
+/* css for index */
+
+.Pacifico {
+  font-family: 'Pacifico';
+  color: #eded45; 
+  
+}
+
+.Quicksand {
+  font-family: 'Quicksand';
+  color: #fff; 
+  
+}
+
+
+
+
+
+p { 
+  text-align: center;
+  padding-top: 00px;
+}
+
+body  {
+  background-image: url(assets/indexbackground.jpg);
+
+  background-repeat: no-repeat;
+  z-index: 0%;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 300px;  
+  font-family: sans-serif; 
+       
+}
+
+
+
+
+
+#centered {
+  position: fixed; /* or absolute */
+  top: 27%;
+  left: 37%;
+}
+
+
+.btn-primary { 
+
+  background-color: #3a9147;
+  padding: 10px 30px; 
+}
+
+.btn-primary:focus{
+  background: #8C8;
+}
+
+.btn-primary:hover{
+  background: #8C8;
+}
+
+/* css for members flickity carousel */
+
+
+* { box-sizing: border-box; }
+
+
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+

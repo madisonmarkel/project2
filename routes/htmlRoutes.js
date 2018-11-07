@@ -14,12 +14,12 @@ module.exports = function(app) {
   // When the website loads... the homepage is displayed
   app.get("/", function(req, res) {
 
-    res.render("index");
+    res.render("index", {layout: 'main.handlebars'});
   });
   // If the user does not have a login, and click on "sign up" they are directed to this page
   app.get("/signup", function(req, res) {
 
-    res.render("signup");
+    res.render("signup", {layout: 'signup.handlebars'});
   });
 
   // =================== WASN'T WORKING
