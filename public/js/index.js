@@ -42,10 +42,10 @@ var API = {
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshRecipes = function() {
   API.getRecipes().then(function(data) {
-    console.log("INDEX.JS REFRESH RECIPES DATA " + data);
+    console.log(data);
     var $recipes = data.map(function(Recipe) {
       var $a = $("<a>")
-        .text(Recipe.ingredients)
+        .text(Recipe.recipe_name)
         .attr("href", "/recipe/" + Recipe.id);
 
       var $li = $("<li>")
@@ -90,7 +90,7 @@ var handleFormSubmit = function(event) {
     alert("You must enter an example text and description!");
     return;
   }
-
+  console.log(recipe);
   API.saveRecipe(recipe).then(function() {
     refreshRecipes();
   });
