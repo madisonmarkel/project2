@@ -5,12 +5,29 @@
         <div class="card-body">
           <h5 class="card-title">Recipe</h5>
           <p>
-            <strong>Title</strong>: {{Recipe.recipe_name}}</p>
+            <strong>Name</strong>: {{Recipe.recipe_name}}</p>
           <p>
-          <p>
-            <strong>Ingredients</strong>: {{Recipe.ingredients}}</p>
-          <p>
-            <strong>Instructions</strong>: {{Recipe.instructions}}</p>
+
+            <p>
+              <strong>Ingredients</strong>: {{Recipe.ingredients}}</p>
+            <p>
+              <strong>Instructions</strong>: {{Recipe.instructions}}</p>
+            <p>
+              <strong>Category</strong>: {{#each Recipe.type_category}}
+              <p>{{this}}</p>
+              {{/each}}
+            <p>
+              <strong>Dietary Types</strong>: {{#each Recipe.dietary_category}}
+              <p>{{this}}</p>
+              {{/each}}
+            </p>
+            <p>
+              <strong>Servings</strong>: {{Recipe.serving}}</p>
+            <p>
+              <strong>Cook Time</strong>: {{Recipe.cook_time}}</p>
+            <p>
+              <strong>Appliances Used</strong>: {{Recipe.cook_method}}</p>
+
             <a href="/members">← Back To Home</a>
         </div>
       </div>
