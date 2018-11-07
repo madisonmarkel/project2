@@ -9,6 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     serving: DataTypes.TEXT,
     cook_time: DataTypes.TEXT,
     cook_method: DataTypes.TEXT,
+    user: DataTypes.TEXT,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
   });

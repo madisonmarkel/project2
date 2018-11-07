@@ -14,6 +14,7 @@ CREATE TABLE recipes(
     serving VARCHAR(20),
     cook_time VARCHAR(100),
     cook_method VARCHAR(500),
+    user VARCHAR(100) NOT NULL,
     createdAt TIMESTAMP NOT NULL,
     updatedAt datetime DEFAULT NULL COMMENT 'updated time',
     PRIMARY KEY(id)
