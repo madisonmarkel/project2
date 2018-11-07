@@ -1,7 +1,7 @@
 <div id="home">
   <div class="container">
     <div class="row">
-      <div class="col-8 offset-2">
+      <div class="col-8 offset-2 background">
         <h1>{{msg}}</h1>
         <h2>Eat Your Heart Out</h2>
 
@@ -100,7 +100,7 @@
           </div>
 
           {{!-- DIETARY CATEGORY --}}
-          <div class="form-group">
+          <div class="form-group" class="form_recipe_dietary">
           <label for="form_recipe_dietary"><h2>Dietary Categories:</h2></label>
           <br>
           <div class="form-check form-check-inline">
@@ -157,11 +157,12 @@
           {{#each recipe}}
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="recipe/{{this.id}}">{{this.recipe_name}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
+            <button class="btn btn-danger float-right delete">Delete</button>
           </li>
           {{/each}}
         </ul>
-      {{!-- API ---}}
+
+        {{!-- API ---}}
         <h3>Search</h3>
         <form>
         <div class="form-group">
@@ -210,5 +211,7 @@
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="/js/index.js"></script>
+
+{{!-- <script src="/js/index.js"></script> --}}
