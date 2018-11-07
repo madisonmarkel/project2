@@ -62,6 +62,7 @@ module.exports = function (app) {
     // ========================= GET ALL RECIPES
     app.get("/api/recipes", function (req, res) {
       db.Recipe.findAll({}).then(function (data) {
+        console.log(data);
         res.json(data);
       });
     });
@@ -79,8 +80,7 @@ module.exports = function (app) {
 
     // ========================= CREATE NEW RECIPE
     app.post("/api/recipes", function (req, res) {
-      console.log("Recipe Data:");
-      console.log(req.body);
+
       db.Recipe.create({
         recipe_name: req.body.recipe_name,
         ingredients: req.body.ingredients,
@@ -119,14 +119,6 @@ module.exports = function (app) {
     });
 
     // ========================= DELETE NEW RECIPE  
-    app.delete("/api/recipes/:id", function (req, res) {
-      db.Recipe.destroy({
-        where: {
-          id: req.params.id
-        }
-      }).then(function (data) {
-        res.json(data);
-      });
-    });
+
   })
 }
