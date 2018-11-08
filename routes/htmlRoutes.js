@@ -26,7 +26,7 @@ module.exports = function(app) {
     db.Recipe.findAll({}).then(function(dbRecipes) {
       res.render("members", {
         msg: "Reciprocity",
-        recipe: dbRecipes
+        recipe: dbRecipesxx
       });
     });
   });
