@@ -1,11 +1,31 @@
-body {
-  background-image: url(/assets/soup.jpg);
+
+body  {
+  background-image: url(assets/indexbackground.jpg);
   background-repeat: no-repeat;
-  z-index: 40%;
+  z-index: 0%;
   background-attachment: fixed;
   background-position: center; 
-  margin-bottom:3em;
+  margin-top: 3em;  
+  margin-bottom:3em; 
+  font-family: sans-serif;       
 }
+.background_black h2 h3 {
+  margin-top:2em;
+}
+.logo_image {
+  max-width: 20em;
+  margin: 0 auto;
+}
+.text_center {
+  text-align: center;
+}
+
+.list-group-item, .form-control {
+  background: #eee9e3;
+}
+.margintop {
+  margin-top: 1em;
+
 
 
 /* Nav Bar Style */
@@ -23,14 +43,18 @@ body {
 
  /* API TABLE */
 .apiImages {
-  max-width: 6em;
+  max-width:11em;
   margin:0 auto;
 }
 td {
   padding:1em;
 }
 
-.background {
+.api_title {
+  margin-top:1em;
+}
+
+.background_black {
   background: rgba(0,0,0,.5);
   color:#fff;
   padding: 1em;
@@ -55,6 +79,9 @@ td {
 #recipePic {
   max-width:20em;
 }
+#recipeName {
+  margin-top:.5em;
+}
 
 /* ------------------------------------------------- */
 
@@ -73,12 +100,8 @@ td {
   
 }
 
-
-
-
-
 p { 
-  text-align: center;
+  /* text-align: center; */
   padding-top: 00px;
 }
 
@@ -98,6 +121,7 @@ body  {
   margin-bottom: 3em;
 }
 
+
 #centered {
   position: fixed; /* or absolute */
   top: 27%;
@@ -106,7 +130,6 @@ body  {
 
 
 .btn-primary { 
-
   background-color: #3a9147;
   padding: 10px 30px; 
 }
@@ -117,6 +140,9 @@ body  {
 
 .btn-primary:hover{
   background: #8C8;
+}
+.api_add, .api_more_info {
+  margin-left:1em;
 }
 
 /* css for members flickity carousel */

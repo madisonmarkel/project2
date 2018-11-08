@@ -1,10 +1,41 @@
 <div id="home">
   <div class="container">
     <div class="row">
-      <div class="col-8 offset-2 background">
-        <h1>{{msg}}</h1>
-        <h2>Eat Your Heart Out</h2>
+      <div class="col-8 offset-2 background_black">
+        <h1 class="text_center"></p><img src="/assets/reciprocity.png" alt="Reciprocity" class="logo_image"></h1>
 
+        {{!-- RECIPE POPULATION --}}
+        <h3>Your Recipes:</h3>
+        <ul id="recipe-list" class="list-group">
+          {{#each recipe}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="recipe/{{this.id}}">{{this.recipe_name}}</a>
+            <button class="btn btn-danger float-right delete">Delete</button>
+          </li>
+          {{/each}}
+        </ul>
+
+        {{!-- API ---}}
+        <h3 class="margintop">Search</h3>
+        <form>
+        <div class="form-group">
+          <label for="api_Search">Search for new recipes by ingredients in your pantry</label>
+          <input type="text" class="form-control" id="user_apiSearch1" aria-describedby="user_apiSearch1" placeholder="Enter 1st Ingredient">
+          <input type="text" class="form-control" id="user_apiSearch2" aria-describedby="user_apiSearch2" placeholder="Enter 2nd Ingredient">
+          <input type="text" class="form-control" id="user_apiSearch3" aria-describedby="user_apiSearch3" placeholder="Enter 3rd Ingredient">
+          <input type="text" class="form-control" id="user_apiSearch4" aria-describedby="user_apiSearch4" placeholder="Enter 4th Ingredient">
+        </div>
+        <button type="submit" id="api_submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <table class="submit_tables" id="api_search_append">
+        <tr>
+
+        </tr>
+      </table>
+
+      {{!-- CREATE NEW RECIPE --}}
+      <h2 class="margintop">Create New Recipe</h2>
         <form class="clearfix mb-4" action="POST">
           {{!-- NAME --}}
           <div class="form-group">
@@ -44,7 +75,7 @@
           {{!-- TYPE CATEGORY --}}
           <div class="form-group">
             <label for="form_recipe_category">
-              <h2>Category:</h2>
+              <h4>Category:</h4>
             </label>
             <br>
             <div class="form-check form-check-inline">
@@ -105,7 +136,7 @@
 
           <div class="form-group" class="form_recipe_dietary">
             <label for="form_recipe_dietary">
-              <h2>Dietary Categories:</h2>
+              <h4>Dietary Categories:</h4>
             </label>
             <br>
             <div class="form-check form-check-inline">
@@ -157,35 +188,7 @@
           {{!-- BUTTON --}}
           <button id="submit" class="btn btn-primary">Submit</button>
         </form>
-        {{!-- RECIPE POPULATION --}}
-        <h3>Recipes:</h3>
-        <ul id="recipe-list" class="list-group">
-          {{#each recipe}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="recipe/{{this.id}}">{{this.recipe_name}}</a>
-            <button class="btn btn-danger float-right delete">Delete</button>
-          </li>
-          {{/each}}
-        </ul>
-
-        {{!-- API ---}}
-        <h3>Search</h3>
-        <form>
-        <div class="form-group">
-          <label for="api_Search">Search for Recipe by Ingredients in your Pantry</label>
-          <input type="text" class="form-control" id="user_apiSearch1" aria-describedby="user_apiSearch1" placeholder="Enter 1st Ingredient">
-          <input type="text" class="form-control" id="user_apiSearch2" aria-describedby="user_apiSearch2" placeholder="Enter 2nd Ingredient">
-          <input type="text" class="form-control" id="user_apiSearch3" aria-describedby="user_apiSearch3" placeholder="Enter 3rd Ingredient">
-          <input type="text" class="form-control" id="user_apiSearch4" aria-describedby="user_apiSearch4" placeholder="Enter 4th Ingredient">
-        </div>
-        <button type="submit" id="api_submit" class="btn btn-primary">Submit</button>
-      </form>
-
-      <table class="submit_tables" id="api_search_append">
-        <tr>
-
-        </tr>
-      </table>
+        
 
       {{!-- <!-- BOOTSTRAP MODAL --> --}}
     <div class="modal" tabindex="-1" role="dialog" id="recipe-api-modal">
@@ -199,10 +202,10 @@
                 </div>
                 <div class="modal-body">
                   <h2 id="recipeName"></h2>
-                    <p style="text-align: center;"><img id="recipePic" src=""></p>
-                    <p style="text-align: center;" id="recipeServing"></p>
-                    <p style="text-align: center;" id="recipeInstructions"></p>
-                    <p style="text-align: center;" id="recipeIngredients"></p>
+                    <p><img id="recipePic" src=""></p>
+                    <p id="recipeServing"></p>
+                    <p id="recipeInstructions"></p>
+                    <p id="recipeIngredients"></p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Close</button>

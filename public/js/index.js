@@ -25,17 +25,19 @@ $( "#api_submit" ).click(function() {
 
         var tBody = $("#api_search_append");
         var tRowData = $("<tr>");
+        // TITLE
+        var tRowTitle = $("<h3 class='api_title'>" + recipeTitle + "</h3>")
         // MORE INFO
         var tRowInfo = $("<button class='api_more_info btn btn-primary' data-toggle='modal' data-target='#exampleModalLong'" + "value=" + recipeID + ">More Info</button>");
         // PHOTO
-        var tRowPhoto = $("<br><img class='apiImages' src=" + recipePhoto + ">");
+        var tRowPhoto = $("<img class='apiImages' src=" + recipePhoto + ">");
         // ADD TO BOOK
         var tRowAdd = $("<button class='api_add btn btn-primary'" + "value=" + recipeID + ">Add to Recipe Book</button>");
 
         tRowData.append(tRowPhoto);
         tRowData.append(tRowAdd);
         tRowData.append(tRowInfo);
-        tRowData.prepend(recipeTitle);
+        tRowData.prepend(tRowTitle);
         tBody.append(tRowData);
       };
       
@@ -59,9 +61,9 @@ $( "#api_submit" ).click(function() {
               console.log(result);
                     $("#recipeName").text(result.title);
                     $("#recipePic").attr("src", result.image);
-                    $("#recipeServing").text("Servings: " + result.servings);
-                    $("#recipeInstructions").html("Instructions: " + result.instructions);
-                    $("#recipeIngredients").text("Ingredients: " + result.extendedIngredients[0].originalString);
+                    $("#recipeServing").html("<strong>Servings: </strong>" + result.servings);
+                    $("#recipeInstructions").html("<strong>Instructions: </strong>" + result.instructions);
+                    $("#recipeIngredients").html("<strong>Ingredients: </strong>" + result.extendedIngredients[0].originalString);
                     // shows modal
                     $("#recipe-api-modal").modal("toggle");
                     //});
