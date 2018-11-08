@@ -1,9 +1,10 @@
+
 body  {
   background-image: url(assets/indexbackground.jpg);
   background-repeat: no-repeat;
   z-index: 0%;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center; 
   margin-top: 3em;  
   margin-bottom:3em; 
   font-family: sans-serif;       
@@ -24,7 +25,22 @@ body  {
 }
 .margintop {
   margin-top: 1em;
+
+
+
+/* Nav Bar Style */
+#navBar{
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50%
 }
+
+#navLogo {
+  width: 45%;
+  height: 45%
+}
+
+
  /* API TABLE */
 .apiImages {
   max-width:11em;
@@ -89,11 +105,27 @@ p {
   padding-top: 00px;
 }
 
+body  {
+  background-image: url(assets/indexbackground.jpg);
+  background-repeat: no-repeat;
+  z-index: 0%;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: sans-serif; 
+       
+}
+
+.logo {
+  margin-top: 300px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
 
 #centered {
   position: fixed; /* or absolute */
   top: 27%;
-  left: 37%;
+  left: 34%
 }
 
 
@@ -142,4 +174,3 @@ p {
   font-size: 80px;
   color: white;
 }
-

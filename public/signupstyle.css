@@ -1,3 +1,15 @@
+/* Nav Bar Style */
+
+#navBar{
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50%
+}
+
+#navLogo {
+  width: 45%;
+  height: 45%
+}
 
 /* css for index */
 
@@ -13,10 +25,6 @@
   
 }
 
-
-
-
-
 p { 
   text-align: center;
   padding-top: 00px;
@@ -26,17 +34,19 @@ p {
 
 body  {
   background-image: url(assets/signupbackground.jpg);
-
   background-repeat: no-repeat;
   z-index: 0%;
   background-attachment: fixed;
-  background-position: center;
-  margin-top: 300px;  
+  background-position: center; 
   font-family: sans-serif;
        
 }
 
-
+.logo {
+  margin-top: 300px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
 
 
 #centered {
@@ -89,4 +99,5 @@ body  {
   font-size: 80px;
   color: white;
 }
+
 

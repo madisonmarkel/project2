@@ -3,19 +3,18 @@
     <div class="col-8 offset-2">
       <div class="card mt-4">
         <div class="card-body">
-          <h5 class="card-title">Recipe</h5>
+          <h5 class="card-title">{{Recipe.recipe_name}}</h5>
+          <ul>
+            <strong>Ingredients</strong>: {{#each Recipe.ingredients}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
           <p>
-            <strong>Name</strong>: {{Recipe.recipe_name}}</p>
+            <strong>Instructions</strong>: {{Recipe.instructions}}</p>
           <p>
-
-            <p>
-              <strong>Ingredients</strong>: {{Recipe.ingredients}}</p>
-            <p>
-              <strong>Instructions</strong>: {{Recipe.instructions}}</p>
-            <p>
-              <strong>Category</strong>: {{#each Recipe.type_category}}
-              <p>{{this}}</p>
-              {{/each}}
+            <strong>Category</strong>: {{#each Recipe.type_category}}
+            <p>{{this}}</p>
+            {{/each}}
             <p>
               <strong>Dietary Types</strong>: {{#each Recipe.dietary_category}}
               <p>{{this}}</p>
