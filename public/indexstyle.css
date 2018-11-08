@@ -1,14 +1,26 @@
-
 body {
   background-image: url(/assets/soup.jpg);
-
   background-repeat: no-repeat;
   z-index: 40%;
   background-attachment: fixed;
-  background-position: center;
-  margin-top: 3em;  
+  background-position: center; 
   margin-bottom:3em;
 }
+
+
+/* Nav Bar Style */
+#navBar{
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50%
+}
+
+#navLogo {
+  width: 45%;
+  height: 45%
+}
+
+
  /* API TABLE */
 .apiImages {
   max-width: 6em;
@@ -72,24 +84,24 @@ p {
 
 body  {
   background-image: url(assets/indexbackground.jpg);
-
   background-repeat: no-repeat;
   z-index: 0%;
   background-attachment: fixed;
   background-position: center;
-  margin-top: 300px;  
   font-family: sans-serif; 
        
 }
 
-
-
-
+.logo {
+  margin-top: 300px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
 
 #centered {
   position: fixed; /* or absolute */
   top: 27%;
-  left: 37%;
+  left: 34%
 }
 
 
@@ -136,4 +148,3 @@ body  {
   font-size: 80px;
   color: white;
 }
-
