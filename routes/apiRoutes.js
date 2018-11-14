@@ -2,6 +2,12 @@ var db = require("../models");
 
 module.exports = function (app) {
 
+  // ========================= API KEYS
+  // GET route for API key
+  app.get('/getkey', function (req, res) {
+    res.send(process.env.SPOONACULAR_KEY);
+  });
+
   // ========================= GET ALL RECIPES
   app.get("/api/recipes", function (req, res) {
     db.Recipe.findAll({}).then(function (data) {

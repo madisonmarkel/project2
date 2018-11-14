@@ -5,7 +5,6 @@ body  {
   z-index: 0%;
   background-attachment: fixed;
   background-position: center; 
-  margin-top: 3em;  
   margin-bottom:3em; 
   font-family: sans-serif;       
 }
@@ -25,7 +24,7 @@ body  {
 }
 .margintop {
   margin-top: 1em;
-
+}
 
 
 /* Nav Bar Style */
@@ -58,6 +57,7 @@ td {
   background: rgba(0,0,0,.5);
   color:#fff;
   padding: 1em;
+  margin-top:3em;
 }
 
 .centered {
