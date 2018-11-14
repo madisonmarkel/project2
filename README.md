@@ -8,4 +8,7 @@ Project 2 for DU Bootcamp - Maddie, Alyssa, Greg, Kayla
 
 <p>Reciprocity uses Passport.js and the Spoonacular API. Coding languages used include JavaScript/JQuery, Node.js, Express, and Sequelize.</p>
 
+
+<p>Reciprocity was created as the second project in the University of Denver's Full Stack Flex Coding Program in 2018.</p>
+
 <p>Reciprocity was created as the second project in the University of Denver's Full Stack Flex Coding Program in 2018.</p>
