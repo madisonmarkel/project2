@@ -4,8 +4,7 @@ body  {
   background-repeat: no-repeat;
   z-index: 0%;
   background-attachment: fixed;
-  background-position: center; 
-  margin-top: 3em;  
+  background-position: center;  
   margin-bottom:3em; 
   font-family: sans-serif;       
 }
@@ -26,13 +25,13 @@ body  {
 .margintop {
   margin-top: 1em;
 
-
+}
 
 /* Nav Bar Style */
-#navBar{
+#navBar {
   padding-top: 0;
   padding-bottom: 0;
-  height: 50%
+  height: 60%
 }
 
 #navLogo {
