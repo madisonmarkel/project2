@@ -6,6 +6,8 @@ Project 2 for DU Bootcamp - Maddie, Alyssa, Greg, Kayla
 
 <p>To use the application, sign up with your email account, create and password, and log in. From there, you can access all the features listed above.</p>
 
+<p><strong>To sign into our test account, use test@test.com with the password of test.</strong></p>
+
 <p>Reciprocity uses Passport.js and the Spoonacular API. Coding languages used include JavaScript/JQuery, Node.js, Express, and Sequelize.</p>
 
 
