@@ -12,5 +12,3 @@ Project 2 for DU Bootcamp - Maddie, Alyssa, Greg, Kayla
 
 
 <p>Reciprocity was created as the second project in the University of Denver's Full Stack Flex Coding Program in 2018.</p>
-
-<p>Reciprocity was created as the second project in the University of Denver's Full Stack Flex Coding Program in 2018.</p>
