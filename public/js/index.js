@@ -1,7 +1,7 @@
 // ========= SPOONCULAR API ===========
 // SEARCH
 function getKeys() {
-  $.get("/getkey", function (key) {
+  $.get("/getkey", function (key, host) {
     $( "#api_submit" ).click(function() {
       event.preventDefault();
       var userInput = $("#user_apiSearch1").val().trim() + "," + $("#user_apiSearch2").val().trim() + "," + $("#user_apiSearch3").val().trim() + "," + $("#user_apiSearch4").val().trim();
@@ -9,7 +9,7 @@ function getKeys() {
       var queryURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=" + userInput;
       $.ajax({
           headers: { "X-Mashape-Key" : key,
-          "X-Mashape-Host": "spoonacular-recipe-food-nutrition-v1.p.mashape.com"},
+          "X-Mashape-Host": host},
           method: "GET",
           url: queryURL,
           data: {
@@ -53,7 +53,7 @@ function getKeys() {
               var queryURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + thisRecipeID + "/information?includeNutrition=false";
               $.ajax({
                   headers: { "X-Mashape-Key" : key,
-                  "X-Mashape-Host": "spoonacular-recipe-food-nutrition-v1.p.mashape.com"},
+                  "X-Mashape-Host": host},
                   method: "GET",
                   url: queryURL,
                   data: {
@@ -86,8 +86,8 @@ function getKeys() {
 
               var queryURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + thisRecipeID + "/information?includeNutrition=false";
               $.ajax({
-                  headers: { "X-Mashape-Key" : "YL7sjzCOlkmshn4ncJBHXNwxEE76p1coUtgjsnMqZOuhZvIUcy",
-                  "X-Mashape-Host": "spoonacular-recipe-food-nutrition-v1.p.mashape.com"},
+                  headers: { "X-Mashape-Key" : key,
+                  "X-Mashape-Host": host},
                   method: "GET",
                   url: queryURL,
                   data: {
