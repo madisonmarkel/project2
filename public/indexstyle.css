@@ -57,7 +57,8 @@ td {
   background: rgba(0,0,0,.5);
   color:#fff;
   padding: 1em;
-  margin-top:3em;
+  margin:0 auto;
+  max-width:100%;
 }
 
 .centered {
@@ -98,6 +99,19 @@ td {
   font-family: 'Quicksand';
   color: #fff; 
   
+}
+.form_center {
+  margin: 0 auto;
+}
+@media screen and (max-width:767px){
+  .form_center {
+    max-width:90%;
+  }
+}
+.signup_center {
+  margin:0 auto;
+  text-align: center;
+  margin-top:9em;
 }
 
 p { 
